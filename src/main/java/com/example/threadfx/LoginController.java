@@ -44,7 +44,7 @@ public class LoginController {
 
         } catch (IOException e) {
             showAlert("Load Error", "Could not load chat menu");
-            e.prinx²tStackTrace();
+            e.printStackTrace();
         }
     }
 
