@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="407.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.threadfx.LoginController">
+   <children>
+
+      <Button layoutX="270.0" layoutY="226.0" mnemonicParsing="false" onAction="#onJoinBtn" style="-fx-background-color: #677feb;" text="Join Chat" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+
+      <Pane layoutY="6.0" prefHeight="33.0" prefWidth="647.0">
+         <children>
+
+            <ImageView fitHeight="33.0" fitWidth="92.0" layoutX="14.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/menu.png" />
+               </image>
+            </ImageView>
+
+            <Label layoutX="260.0" layoutY="4.0" text="Chat Socket">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="571.0" layoutY="11.0" text="A propos">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="59.0" layoutY="9.0" text="M1 TNSID">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+
+         </children>
+
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+
+      </Pane>
+
+      <TextField fx:id="Username" layoutX="185.0" layoutY="170.0" prefHeight="33.0" prefWidth="275.0" promptText="Enter your username">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+
+   </children>
+</AnchorPane>
