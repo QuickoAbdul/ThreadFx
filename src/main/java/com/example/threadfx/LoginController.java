@@ -25,22 +25,21 @@ public class LoginController {
         }
 
         try {
-            // Load the MenuChat scene
+            // Charger la nouvelle scène à partir du fichier FXML
             FXMLLoader loader = new FXMLLoader(MenuchatApplication.class.getResource("menu-chat.fxml"));
             Parent menuChatParent = loader.load();
 
-            // Get the controller and set the username
+            // Appliquer la méthode SetUsername dans le contrôleur MenuChat
             MenuchatController menuChatController = loader.getController();
             menuChatController.setUsername(username);
 
-            // Get the current stage
+            // Récupérer le Stage existant et remplacer la scène
             Stage stage = (Stage) Username.getScene().getWindow();
-
-            // Set the new scene
-            Scene menuChatScene = new Scene(menuChatParent, 600, 400);
-            stage.setScene(menuChatScene);
+            stage.setScene(new Scene(menuChatParent, 600, 400));
             stage.setTitle("Chat - " + username);
-            stage.show();
+
+            // Réinitialisation des ressources de l'ancienne scène
+            Username.clear();
 
         } catch (IOException e) {
             showAlert("Load Error", "Could not load chat menu");
