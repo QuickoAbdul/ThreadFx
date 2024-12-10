@@ -4,8 +4,11 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextFlow;
+
 
 public class MenuchatController {
     @FXML
@@ -20,6 +23,9 @@ public class MenuchatController {
         this.username = username;
     }
 
+    //TODO : AJouter un IF else pour faire la différence des messages reçu
+    //  après avoir implementer les Threads et sockets
+
     @FXML
     private void sendMessage() {
         String message = messageField.getText();
@@ -27,17 +33,22 @@ public class MenuchatController {
         if (message.isEmpty()) {
             return;
         }
-
-        // Create a text flow to add username to the message
+        // Ajout de l'username avant le message (FAIT DANS LE CONTROLLER CAR USR DOIT êTRE UNIQUE
         TextFlow messageFlow = new TextFlow();
+        messageFlow.getStyleClass().add("user-message");
+        messageFlow.setTextAlignment(TextAlignment.RIGHT);
+
         Text usernameText = new Text(username + ": ");
         usernameText.setStyle("-fx-font-weight: bold;");
-        Text messageText = new Text(message);
+        usernameText.setFill(Color.WHITE);
 
-        messageFlow.getChildren().addAll(usernameText, messageText);
+        Text messageText = new Text(message);
+        messageText.setFill(Color.WHITE);
+
+        messageFlow.getChildren().addAll(messageText, usernameText);
         messageList.getChildren().add(messageFlow);
 
-        // Clear the message field
+        // Nettoyage du champs de saisie
         messageField.clear();
     }
 }

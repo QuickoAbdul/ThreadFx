@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="407.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.threadfx.LoginController">
+<AnchorPane prefHeight="407.0" prefWidth="647.0" stylesheets="@../../../css/Styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.threadfx.LoginController">
    <children>
 
-      <Button layoutX="270.0" layoutY="226.0" mnemonicParsing="false" onAction="#onJoinBtn" style="-fx-background-color: #677feb;" text="Join Chat" textFill="WHITE">
+      <Button layoutX="270.0" layoutY="226.0" mnemonicParsing="false" onAction="#onJoinBtn" text="Join Chat" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
