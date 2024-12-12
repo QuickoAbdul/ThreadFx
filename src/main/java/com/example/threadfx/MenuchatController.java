@@ -38,7 +38,7 @@ public class MenuchatController {
         messageFlow.getStyleClass().add("user-message");
         messageFlow.setTextAlignment(TextAlignment.RIGHT);
 
-        Text usernameText = new Text(username + ": ");
+        Text usernameText = new Text(  " :" + username);
         usernameText.setStyle("-fx-font-weight: bold;");
         usernameText.setFill(Color.WHITE);
 

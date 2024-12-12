@@ -13,8 +13,8 @@
 .user-message {
     -fx-background-color: #677feb;
     -fx-background-radius: 10px;
-    -fx-padding: 8px 12px;
-    -fx-max-width: 440px;
+    -fx-padding: 10px 10px 10px 10px;
+    -fx-max-width: 450px;
     -fx-alignment: center-right;
 }
 
