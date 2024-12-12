@@ -1,4 +1,5 @@
-package Chat;
+package com.example.threadfx;
+
 
 import java.io.*;
 import java.net.*;

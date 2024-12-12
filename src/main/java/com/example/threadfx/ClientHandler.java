@@ -1,4 +1,4 @@
-package Chat;
+package com.example.threadfx;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,6 +34,7 @@ public class ClientHandler implements Runnable {
                 
                 broadcastMessageToOthers(username,message);
             }
+
         } catch (IOException e) {
             System.err.println("Erreur de communication : " + e.getMessage());
         } finally {
