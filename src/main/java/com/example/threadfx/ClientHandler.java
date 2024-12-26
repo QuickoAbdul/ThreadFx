@@ -62,7 +62,7 @@ public class ClientHandler implements Runnable {
                 client.out.println(message);
             } else {
                 // Messages pour les autres clients
-                client.out.println("[" + sender + "] -> " + message);
+                client.out.println(message);
             }
         }
     }

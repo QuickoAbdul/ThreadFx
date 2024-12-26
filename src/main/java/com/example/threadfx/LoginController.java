@@ -15,6 +15,8 @@ public class LoginController {
     @FXML
     private TextField Username;
 
+    private ChatClient chatClient;
+
     @FXML
     protected void onJoinBtn() {
         String username = Username.getText().trim();
@@ -25,20 +27,26 @@ public class LoginController {
         }
 
         try {
-            // Charger la nouvelle scène à partir du fichier FXML
+            // Créer une instance de ChatClient et se connecter au serveur
+            chatClient = new ChatClient();
+            chatClient.connect();
+            chatClient.sendMessage(username); // Envoi du nom d'utilisateur au serveur
+
+            // Charger la nouvelle scène du chat
             FXMLLoader loader = new FXMLLoader(MenuchatApplication.class.getResource("menu-chat.fxml"));
             Parent menuChatParent = loader.load();
 
-            // Appliquer la méthode SetUsername dans le contrôleur MenuChat
+            // Appliquer la méthode setUsername dans le contrôleur MenuChat
             MenuchatController menuChatController = loader.getController();
             menuChatController.setUsername(username);
+            menuChatController.setChatClient(chatClient);  // Lier le ChatClient
 
             // Récupérer le Stage existant et remplacer la scène
             Stage stage = (Stage) Username.getScene().getWindow();
             stage.setScene(new Scene(menuChatParent, 600, 400));
             stage.setTitle("Chat - " + username);
 
-            // Réinitialisation des ressources de l'ancienne scène
+            // Réinitialiser le champ de texte
             Username.clear();
 
         } catch (IOException e) {
