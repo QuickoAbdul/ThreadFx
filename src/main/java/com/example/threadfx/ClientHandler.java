@@ -27,7 +27,7 @@ public class ClientHandler implements Runnable {
             updateUserList();
 
             // Demander le nom d'utilisateur
-            out.println("Entrez votre nom d'utilisateur :");
+            out.println("Bienvenue dans le chat :");
             username = in.readLine();
 
             // Envoyer un message système pour la connexion
@@ -39,6 +39,8 @@ public class ClientHandler implements Runnable {
             // Gestion des messages
             String message;
             while ((message = in.readLine()) != null) {
+                // Mettre à jour la liste des utilisateurs pour tous les clients
+                updateUserList();
                 if ("/quit".equalsIgnoreCase(message)) break;
                 
                 broadcastMessageToOthers(username,message);
