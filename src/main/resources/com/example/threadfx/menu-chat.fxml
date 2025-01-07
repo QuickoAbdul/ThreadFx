@@ -32,9 +32,9 @@
                       </content>
                   </ScrollPane>
                   <ScrollPane layoutX="472.0" prefHeight="359.0" prefWidth="125.0">
-               <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="357.0" prefWidth="119.0" />
-               </content>
+                    <content>
+                        <VBox fx:id="onlineList" minHeight="0.0" minWidth="0.0" prefHeight="357.0" prefWidth="119.0" />
+                    </content>
                   </ScrollPane>
          </children>
       </Pane>

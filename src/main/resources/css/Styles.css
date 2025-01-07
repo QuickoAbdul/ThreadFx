@@ -26,3 +26,15 @@
     -fx-max-width: 450px;
     -fx-background-radius: 5px;
 }
+
+.onlineList {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10;
+}
+
+.onlineList .text {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
