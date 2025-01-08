@@ -25,7 +25,7 @@ public class ClientHandler implements Runnable {
 
 
             // Demander le nom d'utilisateur
-            out.println("Bienvenue dans le chat :");
+            out.println("Bienvenue dans le chat : Entrer votre d'utilisateur");
             username = in.readLine();
 
             // Envoyer un message système pour la connexion

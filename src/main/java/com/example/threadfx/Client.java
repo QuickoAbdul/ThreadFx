@@ -12,7 +12,7 @@ public class Client {
         try {
             Socket socket = new Socket(HOST, PORT);
             
-            System.out.println("Nouveau client connecte...");
+            // System.out.println("Nouveau client connecte...");
             
             // Préparation des flux d'entrée/sortie
             BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));

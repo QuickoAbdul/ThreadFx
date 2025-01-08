@@ -7,7 +7,6 @@ import java.util.concurrent.*;
 
 public class Server {
     private static final int PORT = 5000;
-    // private static final List<ClientHandler> clients = new CopyOnWriteArrayList<>();
     public static final List<ClientHandler> clients = new CopyOnWriteArrayList<>();
     
     public static void main(String[] args) {
