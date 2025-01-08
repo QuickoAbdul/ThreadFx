@@ -23,8 +23,6 @@ public class ClientHandler implements Runnable {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
 
-            // Mettre à jour la liste des utilisateurs pour tous les clients
-            updateUserList();
 
             // Demander le nom d'utilisateur
             out.println("Bienvenue dans le chat :");
